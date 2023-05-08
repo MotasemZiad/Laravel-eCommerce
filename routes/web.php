@@ -55,9 +55,7 @@ Route::get('categories', function () {
         20 => "Scala"
     ];
 
-    return view('categories', [
-        'categories' => $categories,
-    ]);
+    return view('categories', compact('categories'));
 });
 
 Route::get('category/{id}', function ($id) {

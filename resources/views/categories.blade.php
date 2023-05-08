@@ -11,9 +11,9 @@
 <body>
     <h2>Most famous programming langugaes</h2>
     <ol>
-        @for ($i = 0; $i < count($categories); $i++)
-            <li>{{ $categories[$i + 1] }}</li>
-        @endfor
+        @foreach ($categories as $category)
+            <li>{{ $category }}</li>
+        @endforeach
     </ol>
 </body>
 
