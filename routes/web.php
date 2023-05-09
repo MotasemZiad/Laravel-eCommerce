@@ -77,6 +77,9 @@ Route::get('category/{id}', function ($id) {
         15 => "Rust",
         16 => "R",
         17 => "Julia",
+        18 => "Perl",
+        19 => "Lua",
+        20 => "Scala"
     ];
 
     return view("category", [
