@@ -10,6 +10,9 @@
 
 <body>
     @yield('content')
+    @section('sidebar')
+        This is sidebar from the main layout
+    @show
 </body>
 
 </html>
