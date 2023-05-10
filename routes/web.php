@@ -14,22 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('pages.welcome');
+})->name('welcome');
 
 Route::get('/about', function () {
-    return view("about", [
+    return view("pages.about", [
         "page_name" => "Laravel | About",
         'page_description' => "About Us Description Fugiat aute incididunt fugiat cupidatat nisi exercitation nostrud excepteur occaecat. Id cillum sunt sunt laboris adipisicing minim dolore. Et irure quis ea irure.",
     ]);
-});
+})->name('about');
 
 Route::get("/contact", function () {
-    return view("contact", [
+    return view("pages.contact", [
         "page_name" => "Laravel | Contact",
         'page_description' => "Contact Us Description Exercitation incididunt nisi aute culpa dolor consequat qui elit aute aliqua ex id sint minim. Eiusmod id eiusmod occaecat ut proident dolor nulla pariatur ea anim exercitation. Anim irure qui et et cupidatat incididunt occaecat labore dolore nulla ipsum nisi veniam quis. Sint eiusmod reprehenderit esse dolore. Labore eiusmod occaecat qui voluptate. Reprehenderit elit eiusmod nulla mollit. Nostrud consectetur reprehenderit ullamco enim ea sit in esse id.",
     ]);
-});
+})->name('contact');
 
 Route::get('categories', function () {
     $categories = [
@@ -55,8 +55,8 @@ Route::get('categories', function () {
         20 => "Scala"
     ];
 
-    return view('categories', compact('categories'));
-});
+    return view('pages.categories', compact('categories'));
+})->name('categories');
 
 Route::get('category/{id}', function ($id) {
     $categories = [
@@ -82,7 +82,7 @@ Route::get('category/{id}', function ($id) {
         20 => "Scala"
     ];
 
-    return view("category", [
+    return view("pages.category", [
         "id" => $categories[$id] ?? "This ID is not found",
     ]);
-});
+})->name('category');
