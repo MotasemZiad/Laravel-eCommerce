@@ -9,10 +9,9 @@
 </head>
 
 <body>
+    @include('layout.navbar')
     @yield('content')
-    @section('sidebar')
-        This is sidebar from the main layout
-    @show
+    @include('layout.sidebar')
 </body>
 
 </html>
